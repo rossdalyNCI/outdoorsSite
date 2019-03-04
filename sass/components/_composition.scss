@@ -1,0 +1,39 @@
+.composition {
+    position: relative;
+
+    &__photo {
+        width: 55%; // bu decalring the width in %, the image will scale with the viewport -responsive design
+        box-shadow: 0 1.5rem 4rem rgba($color-black, .4); // 0 on the X axis, 1.5rem on Y axis & 4rem for the blur
+        border-radius: 2px;
+        position: absolute; // moment we set the position to absolute, it becomes relative to its parent element
+        z-index: 10;
+        transition: all .2s; // animation effect
+        outline-offset: 2rem; // offsets the outline(which is like a border) by 20px
+
+        &--p1 {
+            left: 0; // position 0 from the left within the parent element
+            top: -2rem; // pushed up
+        }
+
+        &--p2 {
+            right: 0; // position 0 from the right within the parent element
+            top: 2rem; // 20px from the top
+        }
+
+        &--p3 {
+            left: 20%; // 20% from the left within the parent element
+            top: 10rem; // 10px from the top
+        }
+
+        &:hover {
+            outline: 1.5rem solid $color-primary; // outline is like a border but we can offset it
+            transform: scale(1.05) translateY(-3rem); // for zooming effect - will scale the images, when hovered, by 1.05 scale & translated along the Yaxis up by -5px
+            box-shadow: 0 2.5rem 4rem rgba($color-black, .5);
+            z-index: 20; // has a higher z-index than the original photo element, so when hovered will scale forward
+        }
+    }
+
+    &:hover &__photo:not(:hover) {
+        transform: scale(.95);
+    }
+}

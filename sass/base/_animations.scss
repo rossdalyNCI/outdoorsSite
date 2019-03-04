@@ -1,0 +1,43 @@
+@keyframes moveInLeft {
+    0% { /* The starting point, before the animation beigns */
+        opacity: 0; /* we want the animation to be invisible beofre it starts */
+        transform: translateX(-10rem); /* we want the animation to animate along the X-axis(this is the initial position) */
+    }
+
+    80% {
+        transform: translateX(1rem); /* as the moveInLeft keyframe gets to 80% of the animation, we extend it by 10px, pushing to the right, */
+    }
+
+    100% { /* The end point, when the animation ends */
+        opacity: 1; /* making the animation visible at the end of the animation */
+        transform: translate(0); /* we want it to look centered along the X-axis at the end(this is the final position) */
+    }
+}
+
+@keyframes moveInRight {
+    0% { /* The starting point, before the animation beigns */
+        opacity: 0; /* we want the animation to be invisible beofre it starts */
+        transform: translateX(10rem); /* we want the animation to animate along the X-axis(this is the initial position) */
+    }
+
+    80% {
+        transform: translateX(-1rem); /* as the moveInRight keyframe gets to 80% of the animation, we extend it by -10px, pushing to the left */
+    }
+
+    100% { /* The end point, when the animation ends */
+        opacity: 1; /* making the animation visible at the end of the animation */
+        transform: translate(0); /* we want it to look centered along the X-axis at the end(this is the final position) */
+    }
+}
+
+@keyframes moveInBottom {
+    0% { /* The starting point, before the animation beigns */
+        opacity: 0; /* we want the animation to be invisible beofre it starts */
+        transform: translateY(3rem); /* we want the animation to animate along the Y-axis(this is the initial position) */
+    }
+
+    100% { /* The end point, when the animation ends */
+        opacity: 1; /* making the animation visible at the end of the animation */
+        transform: translate(0); /* we want it to look centered along the X-axis at the end(this is the final position) */
+    }
+}

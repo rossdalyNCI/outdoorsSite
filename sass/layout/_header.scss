@@ -1,0 +1,34 @@
+.header {
+    height: 95vh; /* Think of the viewport height as the initial screen size in percentage and what the user sees when landing on a site(without scrolling) */
+    background-image: linear-gradient(
+    to right bottom,
+    rgba($color-primary-light, 0.8),
+    rgba($color-primary-dark, 0.8)
+    ),
+    url(../img/hero.jpg);
+    background-size: cover; /* this will cover the lenght of what has been set in the height(so, 95%) */
+    background-position: top; /* makes sure that the background image stays stuck to the top of the sreen */
+    position: relative; /* this becomes the origin for top & left position - like the starting point that they are based off or the reference point from where to count */
+    /* clip-path: polygon(0 0, 25% 12%, 100% 50%, 0 100%);  Make a triangle challenge */
+    /* clip-path: polygon(50% 0, 100% 100%, 0 100%);  Make a triangle challenge 2 */
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
+    &__logo-box { /* the '&' takes the header class above and applies all the attributes to the 'logo-box' */
+        position: absolute;
+        top: 4rem; /* 4rem from the top */
+        left: 4rem; /* 4rem from the left */
+    }
+
+    &__logo {
+        height: 3.5rem; /* the height or size of the actual logo, rather than the space around it. Also by controlling the height, the browser figures out and configures the width */
+    }
+    
+    &__text-box {
+        position: absolute;
+        top: 40%; /* positoned 40% from the top */
+        left: 50%; /* positoned 50% from the left*/
+        transform: translate(-50%, -50%); /* this operates along the x-axis and y-axis. */ 
+        text-align: center; /* as the button is inisde the text-box class, this attribute will center the button */
+    }
+}
