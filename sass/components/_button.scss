@@ -35,6 +35,15 @@
     }
 }
 
+&--green {
+    background-color: $color-primary;
+    color: $color-white;
+
+    &::after {
+        background-color: $color-white;
+    }
+}
+
 &::after { /* pseudo element - in this exapmle, its treated like a child of the btn class */
     content: ""; /* must be specified, otherwise psuedo element wont display */
     display: inline-block; /* must be specified, otherwise psuedo element wont display */

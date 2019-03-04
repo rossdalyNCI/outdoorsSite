@@ -53,6 +53,8 @@
         background-blend-mode: screen;
         -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); // so this modern CSS3 technique works acroos all other browsers
         clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); // makes the line cut in the image
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
 
         &--1 {
             background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark), url(../img/nat-5.jpg);
