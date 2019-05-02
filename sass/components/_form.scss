@@ -65,7 +65,7 @@
         display: inline-block; //elements above only work if display is given a block or inline block value
         position: absolute;
         left: 0;
-        top: 0;
+        top: -.4rem;
 
         &::after {
             content: "";
@@ -78,6 +78,12 @@
             left: 50%;
             transform: translate(-50%, -50%);
             background-color: $color-primary;
+            opacity: 0;
+            transition: opacity .2s;
         }
+    }
+
+    &__radio-input:checked ~ &__radio-label &__radio-button::after { // ~ selecting the sibling and child elements
+        opacity: 1;
     }
 }
