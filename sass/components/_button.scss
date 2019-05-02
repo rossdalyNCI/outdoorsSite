@@ -1,4 +1,5 @@
 .btn {
+    &,
     &:link,
     &:visited {
     text-transform: uppercase;
@@ -9,11 +10,15 @@
     transition: all .2s;
     position: relative;
     font-size: $default-font-size;
+
+    //Change for the <button> element
+    border: none;
+    cursor: pointer;
 }
 
 &:hover {
     transform: translateY(-3px); /* negative along the Y-axis will send the element up */
-    box-shadow: 0 1rem 2rem rgba($color-black, .2); /* along the x-axis is 0, along the y-axis is 10px(so the shadow will be 10px downward) and the blur is 20px */
+    box-shadow: 0 1rem 2rem rgba($color-black,.2); /* along the x-axis is 0, along the y-axis is 10px(so the shadow will be 10px downward) and the blur is 20px */
 
     &::after { /* when we hover the button, we want some styles to show using the after pseudo element */
         transform: scaleX(1.4) scaleY(1.6); /* scales the size of the effect */
@@ -21,7 +26,9 @@
     }
 }
 
-&:active { /* active here is when a button is 'clicked' */
+&:active,
+&:focus  { /* active here is when a button is 'clicked' */
+    outline: none;
     transform: translateY(-1px);
     box-shadow: 0 .5rem 1rem rgba($color-black, .2);
 }
